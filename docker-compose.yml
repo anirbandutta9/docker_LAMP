@@ -11,17 +11,17 @@ services:
 
 
 
-     db: 
-         image: mariadb:latest
-         command: mysqld --innodb-buffer-pool-size=64M
-         volumes:
-              - ./database:/var/lib/mysql
-         restart: always
-         environment:
-              MYSQL_ROOT_PASSWORD: my_root_pass12345
-              MYSQL_DATABASE: database
-              MYSQL_USER: user
-              MYSQL_PASSWORD: passwd
+    db: 
+        image: mariadb:latest
+        command: mysqld --innodb-buffer-pool-size=64M
+        volumes:
+            - ./database:/var/lib/mysql
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: my_root_pass12345
+            MYSQL_DATABASE: database
+            MYSQL_USER: user
+            MYSQL_PASSWORD: passwd
 
 volumes:
    database:
